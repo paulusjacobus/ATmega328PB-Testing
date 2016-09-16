@@ -83,12 +83,18 @@ recipe.preproc.macros="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {
 
 # AVR Uploader/Programmers tools
 # ------------------------------
+# ELEKTOR
+#tools.avrdude.path={runtime.tools.avrdude.path}
+#tools.avrdude.cmd.path={path}/bin/avrdude
+#tools.avrdude.config.path={path}/etc/avrdude.conf
 
 tools.avrdude.cmd=bin/avrdude
 tools.avrdude.cmd.windows=bin/avrdude.exe
 tools.avrdude.path={runtime.tools.avrdude.path}
 #tools.avrdude.path={runtime.tools.avrdude-6.3.0-arduino2.path}
+# seems to be the orignal
 tools.avrdude.config={path}/etc/avrdude.conf
+# seems to be the error from ATmega328PBtesting
 #tools.avrdude.config={runtime.platform.path}/tools/avrdude.conf
 
 tools.avrdude.upload.params.verbose=-v
